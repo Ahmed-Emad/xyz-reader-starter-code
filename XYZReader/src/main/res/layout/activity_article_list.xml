@@ -2,14 +2,13 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:fitsSystemWindows="true">
+    android:layout_height="match_parent">
 
     <android.support.v4.widget.SwipeRefreshLayout
         android:id="@+id/swipe_refresh_layout"
-        android:fitsSystemWindows="true"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true">
 
         <android.support.v7.widget.RecyclerView
             android:id="@+id/recycler_view"
@@ -20,7 +19,8 @@
             android:paddingLeft="@dimen/list_side_margin"
             android:paddingRight="@dimen/list_side_margin"
             android:paddingTop="72dp"
-            android:scrollbarStyle="outsideOverlay"/>
+            android:scrollbarStyle="outsideOverlay"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
     </android.support.v4.widget.SwipeRefreshLayout>
 
     <android.support.design.widget.AppBarLayout
@@ -28,13 +28,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
-        app:elevation="8dp">
+        app:elevation="4dp">
 
         <android.support.v7.widget.Toolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?actionBarSize"
-            app:elevation="8dp">
+            app:layout_scrollFlags="scroll|enterAlways">
 
             <ImageView
                 android:layout_width="wrap_content"
@@ -44,30 +44,5 @@
         </android.support.v7.widget.Toolbar>
 
     </android.support.design.widget.AppBarLayout>
-
-    <!--<FrameLayout-->
-    <!--android:id="@+id/toolbar_container"-->
-    <!--android:layout_width="match_parent"-->
-    <!--android:layout_height="112dp"-->
-    <!--android:background="?colorPrimary"-->
-    <!--android:elevation="8dp">-->
-
-    <!--<android.support.v7.widget.Toolbar-->
-    <!--android:id="@+id/toolbar"-->
-    <!--app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"-->
-    <!--android:layout_marginLeft="@dimen/list_toolbar_side_margin"-->
-    <!--android:layout_marginRight="@dimen/list_toolbar_side_margin"-->
-    <!--android:layout_width="match_parent"-->
-    <!--android:layout_height="?actionBarSize"-->
-    <!--android:layout_gravity="bottom">-->
-
-    <!--<ImageView-->
-    <!--android:layout_width="wrap_content"-->
-    <!--android:layout_height="wrap_content"-->
-    <!--android:src="@drawable/logo"-->
-    <!--android:contentDescription="@string/app_name" />-->
-
-    <!--</android.support.v7.widget.Toolbar>-->
-    <!--</FrameLayout>-->
 
 </android.support.design.widget.CoordinatorLayout>
